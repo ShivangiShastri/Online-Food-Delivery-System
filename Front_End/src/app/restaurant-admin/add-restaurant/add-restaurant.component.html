@@ -1,0 +1,164 @@
+<body>
+<br /><br />
+<div class="container">
+    <button class="btn btn-danger" style="float: right;" (click)="back()">Log Out</button>
+    <h3>Register Restaurant</h3>
+    <br />
+    <form [formGroup]="restaurantForm" (ngSubmit)="addRestaurant()">
+        <div class="form-group">
+            <label for="restaurantId">Restaurant Id:</label>
+            <input type="text" formControlName="restaurantId" placeholder="Enter Restaurant Id" name="restaurantId"
+                class="form-control" id="restaurantId">
+            <div *ngIf="submitted && restaurantForm.controls.restaurantId?.errors" class="error">
+                <div class="text-danger" *ngIf="restaurantForm.controls.restaurantId?.errors.required">Restaurant Id is
+                    required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="restaurantName">Restaurant Name:</label>
+            <input type="text" formControlName="restaurantName" class="form-control" name="restaurantName"
+                id="restaurantName" placeholder="Enter Restaurant Name">
+            <div *ngIf="submitted && restaurantForm.controls.restaurantName?.errors" class="error">
+                <div class="text-danger" *ngIf="restaurantForm.controls.restaurantName?.errors.required">Restaurant Name
+                    is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="managerName">Manager Name:</label>
+            <input type="text" formControlName="managerName" class="form-control" name="managerName" id="managerName"
+                placeholder="Enter Manager Name">
+            <div *ngIf="submitted && restaurantForm.controls.managerName?.errors" class="error">
+                <div class="text-danger" *ngIf="restaurantForm.controls.managerName?.errors.required">Manager Name is
+                    required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" formControlName="contactNumber" class="form-control" name="contactNumber"
+                id="contactNumber" placeholder="Enter Contact Number">
+            <div *ngIf="submitted && restaurantForm.controls.contactNumber?.errors" class="error">
+                <div class="text-danger" *ngIf="restaurantForm.controls.contactNumber?.errors.required">Contact Number
+                    is
+                    required.</div>
+            </div>
+        </div>
+        <div formGroupName="address">
+            <div class="form-group">
+                <label for="addressId">Address Id:</label>
+                <input type="text" formControlName="addressId" placeholder="Enter  addressId" name="addressId"
+                    class="form-control" id="addressId">
+                <div *ngIf="submitted && restaurantForm.controls.addressId?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.addressId?.errors.required">Address Id is
+                        required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <input type="text" formControlName="area" placeholder=" Enter area" name="area" class="form-control"
+                    id="area">
+                <div *ngIf="submitted && restaurantForm.controls.area?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.area?.errors.required">Area is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="buildingName">Building Name:</label>
+                <input type="text" formControlName="buildingName" placeholder="Enter buildingName" name="buildingName"
+                    class="form-control" id="buildingName">
+                <div *ngIf="submitted && restaurantForm.controls.buildingName?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.buildingName?.errors.required">Building Name
+                        is
+                        required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="city">City:</label>
+                <input type="text" formControlName="city" placeholder="Enter city" name="city" class="form-control"
+                    id="city">
+                <div *ngIf="submitted && restaurantForm.controls.city?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.city?.errors.required">City is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" formControlName="country" placeholder="Enter country" name="country"
+                    class="form-control" id="country">
+                <div *ngIf="submitted && restaurantForm.controls.country?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.country?.errors.required">Country is
+                        required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pincode">Pincode:</label>
+                <input type="text" formControlName="pincode" placeholder="Enter pincode" name="pincode"
+                    class="form-control" id="pincode">
+                <div *ngIf="submitted && restaurantForm.controls.pincode?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.pincode?.errors.required">Pincode is
+                        required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="state">State:</label>
+                <input type="text" formControlName="state" placeholder="Enter state" name="state" class="form-control"
+                    id="state">
+                <div *ngIf="submitted && restaurantForm.controls.state?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.state?.errors.required">State is required
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="streetNo">Street No:</label>
+                <input type="text" formControlName="streetNo" placeholder="Enter streetNo" name="streetNo"
+                    class="form-control" id="streetNo">
+                <div *ngIf="submitted && restaurantForm.controls.streetNo?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.streetNo?.errors.required">Street No is
+                        required</div>
+                </div>
+            </div>
+        </div>
+        <div formGroupName="items">
+            <div class="form-group">
+                <label for="itemId">Item Id:</label>
+                <input type="text" formControlName="itemId" placeholder="Enter itemId" name="itemId"
+                    class="form-control" id="itemId">
+                <div *ngIf="submitted && restaurantForm.controls.itemId?.errors" class="error">
+                    <div class="text-danger" *ngIf="restaurantForm.controls.itemId?.errors.required">Item Id is required
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-success">Submit</button>&nbsp; &nbsp;
+        <button class="btn btn-danger" type="reset">Reset</button>&nbsp; &nbsp;
+        <br /><br />
+    </form>
+</div>
+</body>
+<table class="table table-dark">
+    <tr *ngIf="restaurants.length >0">
+    <th>Restaurant Id</th>
+    <th>Restaurant Name</th>
+    <th>Manager Name</th>
+    <th>Contact Number</th>
+    <th>Street No</th>
+    <th>Area</th>
+    <th>City</th>
+    <th>Pincode</th>
+    <th>Category Name</th>
+    <th>Item Name</th>
+    <th>Cost</th>
+    </tr>
+    <tr *ngFor="let restaurant of restaurants">
+        <td>{{restaurant.restaurantId}}</td>
+        <td>{{restaurant.restaurantName}}</td>
+        <td>{{restaurant.managerName}}</td>
+        <td>{{restaurant.contactNumber}}</td>
+        <td>{{restaurant.address.streetNo}}</td>
+        <td>{{restaurant.address.area}}</td>
+        <td>{{restaurant.address.city}}</td>
+        <td>{{restaurant.address.pincode}}</td>
+        <td>{{restaurant.items.category.categoryName}}</td>
+        <td>{{restaurant.items.itemName}}</td>
+        <td>{{restaurant.items.cost}}</td>
+    </tr>
+</table>
