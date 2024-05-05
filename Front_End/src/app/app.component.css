@@ -1,0 +1,23 @@
+.container {
+  background-color: #ffef96;
+  background-image: url("/assets/images/wood.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+hr {
+  border: 1px solid black;
+}
+span {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  align-content: center;
+  margin-left: 60px;
+  font-size: 45px;
+  margin-top: 10px;
+}
+.aligncenter {
+    display: flex; 
+   margin-left: 140px;
+   margin-top: 10px;
+}
