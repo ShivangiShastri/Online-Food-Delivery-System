@@ -1,0 +1,37 @@
+<div class="container">
+    <h2></h2>
+    <button class=" btn btn-success" (click)="viewRestaurants()">View Restaurants</button>
+    <button class="btn btn-primary" style="float:right"  (click)="logout()">Back</button>&nbsp;&nbsp;
+    <button class="btn btn-warning"  style="margin-left: 700px;"   (click)="addToCart()">Choose your Order</button>&nbsp;&nbsp;
+    <br /><br />
+    <table class="table table-dark table-bordered">
+        <tr *ngIf="restaurants.length >0">
+        <th>Restaurant No.</th>
+        <th>Restaurant Name</th>
+        <th>Contact Number</th>
+        <th>Street No</th>
+        <th>Area</th>
+        <th>City</th>
+        <th>Pincode</th>
+        <th>Category Name</th>
+        <th>Item Name</th>
+        <th>Cost</th>
+
+
+
+        <tr *ngFor="let restaurant of restaurants">
+            <td>{{restaurant.restaurantId}}</td>
+            <td>{{restaurant.restaurantName}}</td>
+            <td>{{restaurant.contactNumber}}</td>
+            <td>{{restaurant.address.streetNo}}</td>
+            <td>{{restaurant.address.area}}</td>
+            <td>{{restaurant.address.city}}</td>
+            <td>{{restaurant.address.pincode}}</td>
+            <td>{{restaurant.items.category.categoryName}}</td>
+            <td>{{restaurant.items.itemName}}</td>
+            <td>{{restaurant.items.cost}}</td>
+
+
+        </tr>
+    </table>
+</div>
