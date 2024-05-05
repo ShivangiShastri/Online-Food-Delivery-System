@@ -1,0 +1,51 @@
+<body>
+<br/><br/>
+<div class="container">
+  <h3>Add Item</h3>
+  <br/>
+  <form [formGroup]="itemForm" (ngSubmit)="addItem()">
+
+  <div class="form-group">
+    <label for="itemId">Item Id:</label>
+    <input formControlName="itemId" placeholder="Item Id" name="itemId" class="form-control" id="itemId">
+    <div *ngIf="submitted && itemForm.controls.itemId.errors" class="error">
+        <div class="text-danger" *ngIf="itemForm.controls.itemId.errors.required">Item Id is required</div>
+      </div>
+  </div>
+  <div class="form-group">
+    <label for="itemName">Item Name:</label>
+    <input formControlName="itemName" placeholder="Item Name" name="itemName" class="form-control" id="itemName">
+    <div *ngIf="submitted && itemForm.controls.itemName.errors" class="error">
+        <div class="text-danger" *ngIf="itemForm.controls.itemName.errors.required">Item Name is required</div>
+      </div>
+  </div>
+  <div class="form-group">
+    <label for="cost">Cost:</label>
+    <input formControlName="cost" placeholder="Item Cost" name="cost" class="form-control" id="cost">
+    <div *ngIf="submitted && itemForm.controls.cost.errors" class="error">
+        <div class="text-danger" *ngIf="itemForm.controls.cost.errors.required">Item cost is required</div>
+      </div>
+  </div>
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input formControlName="quantity" placeholder="Item Quantity" name="quantity" class="form-control" id="quantity">
+        <div *ngIf="submitted && itemForm.controls.quantity.errors" class="error">
+            <div class="text-danger" *ngIf="itemForm.controls.quantity.errors.required">Item Quantity is required</div>
+          </div>
+      </div>
+      <div formGroupName="category">
+      <div class="form-group">
+        <label for="categoryId">Category Id:</label>
+        <input formControlName="categoryId" placeholder="Category Id" name="categoryId" class="form-control" id="categoryId">
+        <div *ngIf="submitted && itemForm.controls.categoryId.errors" class="error">
+            <div class="text-danger" *ngIf="itemForm.controls.categoryId.errors.required">Category Id is required</div>
+          </div>
+      </div>
+    </div>
+  <button class="btn btn-success">Submit</button>&nbsp; &nbsp;
+    <button class="btn btn-danger" type="reset">Reset</button>&nbsp; &nbsp;
+    <button class="btn btn-primary" (click)="viewList()">View Items</button>&nbsp; &nbsp;
+    <br/><br/>
+</form>
+</div>
+</body>
