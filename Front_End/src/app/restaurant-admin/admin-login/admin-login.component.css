@@ -1,0 +1,108 @@
+input[type="text"]:focus {
+	background-color: lightblue;
+	box-sizing: border-box;
+  
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	padding: 12px 20px;
+	display: inline-block;
+	width: 100%;
+  }
+  
+  body {
+	background-image: url("/assets/images/brownie.jpeg");
+	background-position: center;
+  height: 520px;
+	background-size:cover;
+  }
+  
+  .container {
+	  margin-top: 40px;
+	width: 600px;
+	opacity: 0.8;
+
+  }
+  
+  input[type="submit"] {
+	width: 120px;
+	background-color: #4caf50;
+	color: white;
+	padding: 10px 18px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  .center {
+	  margin: 0;
+	  top: 50%;
+	  left: 50%;
+	}
+  
+  
+  
+  input[type="submit"]:hover {
+	background-color: #45a049;
+  }
+  
+  div {
+	border-radius: 5px;
+	background-color: #e6e2d3;
+	padding: 5px;
+  }
+  legend {
+	background-color: #000;
+	color: #fff;
+	padding: 3px 6px;
+  }
+  
+  fieldset {
+	width: inherit; /* Or auto */
+	padding: 0 10px; /* To give a bit of padding on the left and right */
+	border-bottom: none;
+  }
+  
+  .output {
+	font: 1rem "Fira Sans", sans-serif;
+  }
+  
+  label {
+	margin-left: 0px;
+	font-weight: bold;
+  }
+  
+  .container-fluid {
+	width: 100%;
+  }
+  
+  h3 {
+	margin-left: 230px;
+  }
+  
+  input {
+	margin: 0.4rem;
+	width: 100%;
+	display: inline-block;
+	margin-left: 0px;
+	border: 1px solid black;
+  }
+  
+  .form {
+	margin: 0 auto;
+	width: 400px;
+	opacity: 0.1;
+  }
+  
+  /* .form label{
+	  display: inline-block;
+	  text-align: center;
+	  
+  }
+  
+  .form input{
+	  display: inline-block;
+	  text-align: left;
+	  
+  } */
+  
