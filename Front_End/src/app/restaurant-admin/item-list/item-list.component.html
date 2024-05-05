@@ -1,0 +1,24 @@
+<div class="container">
+<h2></h2>
+<button class="btn btn-success" (click)="viewAllItems()">View Items</button>
+<button class="btn btn-primary" style="float:right" (click)="back()">Back</button>
+<br><br>
+<table class="table table-dark table-bordered">
+    <tr *ngIf="items.length >0">
+        <th>Item Id</th>
+        <th>Item Name</th>
+        <th>Cost</th>
+        <th>Category Name</th>
+       <!--  <th> Update?</th>
+        <th>Delete?</th> -->
+    </tr>
+    <tr *ngFor="let item of items">
+        <td>{{item.itemId}}</td>
+        <td>{{item.itemName}}</td>
+        <td>{{item.cost}}</td>
+        <td>{{item.category.categoryName}}</td>
+        <!-- <td><button class="btn btn-warning" (click)= "editStudent(student)" >Update</button></td>
+        <td><button class="btn btn-danger" (click)="deleteStudent(student.studentId)">Delete</button></td> -->
+    </tr>
+  </table>
+  </div>
