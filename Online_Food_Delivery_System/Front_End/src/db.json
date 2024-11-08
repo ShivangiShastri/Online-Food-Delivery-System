@@ -1,0 +1,29 @@
+
+{
+  "orders":[
+
+  ],
+
+
+
+  "customers": [
+    {
+      "userid": "1",
+      "userName": "anjali",
+      "password": "anjali",
+      "id": 1
+    },
+    {
+      "userid": "2",
+      "userName": "Komal",
+      "password": "komal",
+      "id": 3
+    },
+    {
+      "userid": "2",
+      "userName": "Tanmayi",
+      "password": "Tanmayi",
+      "id": 4
+    }
+  ]
+}
